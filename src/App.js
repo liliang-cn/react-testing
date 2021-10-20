@@ -1,10 +1,10 @@
-import DrinkSearch from './DrinkSearch';
+import Register from './Register';
 
 function App() {
   return (
     <div>
       <div hidden>Testing</div>
-      <DrinkSearch />
+      <Register handleRegister={console.log} />
     </div>
   );
 }
