@@ -1,12 +1,11 @@
-import Register from './Register';
+import retailProducts from './api/retailProducts';
+import Retail from './Retail';
+import { RetailProvider } from './RetailContext';
 
-function App() {
-  return (
-    <div>
-      <div hidden>Testing</div>
-      <Register handleRegister={console.log} />
-    </div>
-  );
-}
+const App = () => (
+  <RetailProvider products={retailProducts}>
+    <Retail />
+  </RetailProvider>
+);
 
 export default App;
