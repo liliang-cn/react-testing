@@ -2,13 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { render as rtlRender } from '@testing-library/react';
 import faker from 'faker';
 import { Provider } from 'react-redux';
-import retailReducer from './RetailRedux/retailSlice';
+import retailReducer from '../RetailRedux/retailSlice';
 
 const fakeStore = {
   retail: {
     products: [
       {
-        id: faker.random.uuid(),
+        id: faker.datatype.uuid(),
         title: faker.commerce.productName(),
         price: faker.commerce.price(),
         description: faker.commerce.productDescription(),
@@ -16,7 +16,7 @@ const fakeStore = {
         image: faker.image.fashion(),
       },
       {
-        id: faker.random.uuid(),
+        id: faker.datatype.uuid(),
         title: faker.commerce.productName(),
         price: faker.commerce.price(),
         description: faker.commerce.productDescription(),
